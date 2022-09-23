@@ -1,3 +1,5 @@
+package com.parcial1;
+
 /*
    Programa que pide un numero y muestra si es mayor,menor o igual que 15
 */

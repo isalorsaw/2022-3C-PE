@@ -13,19 +13,23 @@
           
           String m=JOptionPane.showInputDialog("Menu\n1. Sol\n2. Sombra");
           int menu=Integer.parseInt(m);
-          
-          m=JOptionPane.showInputDialog("Cuantos Boletos desea");
-          int cantidad=Integer.parseInt(m);
+          int cantidad=0;
           
           if(menu==1)
           {
+                m=JOptionPane.showInputDialog("Cuantos Boletos desea");
+              cantidad=Integer.parseInt(m);
               totalpagar=cantidad*150;
+              JOptionPane.showMessageDialog(null,"Total a Pagar sera: "+totalpagar);
           }
           else if(menu==2)
           {
+               m=JOptionPane.showInputDialog("Cuantos Boletos desea");
+              cantidad=Integer.parseInt(m);
               totalpagar=cantidad*400;
+              JOptionPane.showMessageDialog(null,"Total a Pagar sera: "+totalpagar);
           }
+          else JOptionPane.showMessageDialog(null,"Opcion Invalida");
           
-          JOptionPane.showMessageDialog(null,"Total a Pagar sera: "+totalpagar);
       }
   }

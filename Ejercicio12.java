@@ -7,29 +7,31 @@
   public class Ejercicio12
   {
       public static void main(String args[])
-      {
+      {//Inicio
           //Declarar e Inicializar Variables
           int totalpagar=0;
+          int preciosol=200;
+          int preciosombra=450;
           
-          String m=JOptionPane.showInputDialog("Menu\n1. Sol\n2. Sombra");//Entrada=Input
+          String m=JOptionPane.showInputDialog("Menu\n1. Sol "+preciosol+"\n2. Sombra "+preciosombra);//Entrada=Input
           int menu=Integer.parseInt(m);//Convertir de String a Int
+          //int menu=Double.parseDouble(m);
           int cantidad=0;
           
           if(menu==1)
           {
-                m=JOptionPane.showInputDialog("Cuantos Boletos desea");//Entrada=Input
-              cantidad=Integer.parseInt(m);//Convertir de String a Int
-              totalpagar=cantidad*150;
+                String c=JOptionPane.showInputDialog("Cuantos Boletos desea");//Entrada=Input
+              cantidad=Integer.parseInt(c);//Convertir de String a Int
+              totalpagar=cantidad*preciosol;
               JOptionPane.showMessageDialog(null,"Total a Pagar sera: "+totalpagar);//Salida MessageDialog
           }
           else if(menu==2)
           {
                m=JOptionPane.showInputDialog("Cuantos Boletos desea");//Entrada=Input
               cantidad=Integer.parseInt(m);//Convertir de String a Int
-              totalpagar=cantidad*400;
+              totalpagar=cantidad*preciosombra;
               JOptionPane.showMessageDialog(null,"Total a Pagar sera: "+totalpagar);//Salida MessageDialog
           }
           else JOptionPane.showMessageDialog(null,"Opcion Invalida");//Salida MessageDialog
-          
-      }
+      }//Fin
   }

@@ -11,15 +11,15 @@ public class Ejercicio4
         String entrada=JOptionPane.showInputDialog("Ingrese un Numero");
         int num=Integer.parseInt(entrada);
         
-        if(num<15)
+        if(num<15)//Si
         {
             JOptionPane.showMessageDialog(null,"El Numero que usd ingreso es menor a 15");
         }
-        else if(num>15)
+        else if(num>15)//Si No
         {
             JOptionPane.showMessageDialog(null,"El Numero que usd ingreso es mayor a 15");
         }
-        else
+        else//Si No se cumple
         {
             JOptionPane.showMessageDialog(null,"El Numero que usd ingreso es igual a 15");
         }

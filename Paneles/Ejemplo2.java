@@ -13,7 +13,7 @@ public class Ejemplo2
                        "JUEGO",
                        JOptionPane.YES_NO_CANCEL_OPTION,
                        JOptionPane.QUESTION_MESSAGE,
-                       new ImageIcon("1.jpg"),
+                       new ImageIcon("imagenes/1.jpg"),
                        new Object[] { "Perro", "Gato", 
                        "Elefante" },   // null para YES, NO y CANCEL
                        "Perro");

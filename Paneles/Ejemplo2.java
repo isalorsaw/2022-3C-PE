@@ -7,13 +7,13 @@ public class Ejemplo2
         String imagenes[]={"1.jpg","2.jpg","3.jpg"};//Arreglo
         
         int aleatorio=2;
-        
+        ImageIcon icono=new ImageIcon(Ejemplo2.class.getResource("imagenes/1.jpg"));
         int seleccion = JOptionPane.showOptionDialog(null,
                        "", 
                        "JUEGO",
                        JOptionPane.YES_NO_CANCEL_OPTION,
                        JOptionPane.QUESTION_MESSAGE,
-                       new ImageIcon("imagenes/1.jpg"),
+                       icono,
                        new Object[] { "Perro", "Gato", 
                        "Elefante" },   // null para YES, NO y CANCEL
                        "Perro");

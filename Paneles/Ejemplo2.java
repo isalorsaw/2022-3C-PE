@@ -9,8 +9,8 @@ public class Ejemplo2
         int aleatorio=2;
         ImageIcon icono=new ImageIcon(Ejemplo2.class.getResource("imagenes/1.jpg"));
         int seleccion = JOptionPane.showOptionDialog(null,
-                       "", 
-                       "JUEGO",
+                       "Informacion", 
+                       "Titulo",
                        JOptionPane.YES_NO_CANCEL_OPTION,
                        JOptionPane.QUESTION_MESSAGE,
                        icono,

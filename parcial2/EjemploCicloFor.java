@@ -3,7 +3,7 @@ package parcial2;
    Pedir 5 numeros y mostrar cuantos son pares.
    */
 import javax.swing.JOptionPane;
-public class EjemploCiclo
+public class EjemploCicloFor
 {
     public static void main(String args[])
     {
@@ -11,7 +11,7 @@ public class EjemploCiclo
         int n=0;
         int contar=0;//Contador
         int suma=0;//Acumulador
-        String pares="";
+        String pares="";//Concatenar
         
         int contari=0;
         int sumai=0;

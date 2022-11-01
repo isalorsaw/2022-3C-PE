@@ -13,6 +13,8 @@ public class TestArreglo
         
         int a[]={10,20,30,40,50};//Llenar de forma Predeterminada(Manual)
         imprimir(a);
+        
+        String imagenes[]={"imagen1.jpg","imagen2.jpg","imagen3.png"};
     }
     public static void llenarAleatorio(int ar[], int desde, int hasta)
     {

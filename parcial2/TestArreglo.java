@@ -4,97 +4,53 @@ public class TestArreglo
 {
     public static void main(String args[])
     {
-        int arreglo[]=new int[10];
-        llenarAleatorio(arreglo,1,100);//Llenar de Forma Aleatoria
+        int a[]={1,2,3,4,5};
+        FM.imprimir(a);
+        String inv=invertir(a);
+        FM.mensaje(inv);
+        
+        int valor=FM.pedirNumero("Favor ingrese un valor a buscar");
+        
+        boolean b=buscarValor(a,valor);
+        
+        if(b)FM.mensaje("EL Valor "+valor+" si esta en el Arreglo");
+        else FM.mensaje("EL Valor "+valor+" NO esta en el Arreglo");
+    }
+    public static void main2()
+    {
+                int arreglo[]=new int[10];
+        FM.llenarAleatorio(arreglo,1,100);//Llenar de Forma Aleatoria
         //llenar(arreglo);//Llenar por Ingreso de Usuario
-        imprimir(arreglo);
-        int s=suma(arreglo);
-        mensaje("La suma de todos los numeros es "+s);
+        FM.imprimir(arreglo);
+        int s=FM.suma(arreglo);
+        FM.mensaje("La suma de todos los numeros es "+s);
         
         int a[]={10,20,30,40,50};//Llenar de forma Predeterminada(Manual)
-        imprimir(a);
+        FM.imprimir(a);
+        
+        String inv=invertir(a);
+        FM.mensaje(inv);
         
         String imagenes[]={"imagen1.jpg","imagen2.jpg","imagen3.png"};
     }
-    public static void llenarAleatorio(int ar[], int desde, int hasta)
+    public static boolean buscarValor(int a[], int v)
     {
-        for(int i=0;i<ar.length;i++)
+        for(int i=0;i<a.length;i++)
         {
-            ar[i]=generaAleatorio(desde,hasta);
+            
         }
+      return false;   
     }
-    public static int generaAleatorio(int desde, int hasta)
+    public static String invertir(int a[])
     {
-       return ((int)(Math.random()*(hasta-desde+1)+desde));
-    }
-    public static int suma(int ar[])
-    {
-        int suma=0;
-        for(int i=0;i<ar.length;i++)
+        String inv= "Informacion a la Inversa\n";                        
+        for(int i=a.length-1; i>=0; i-- )
         {
-            suma=suma+ar[i];
+            //inv= inv + c.charAt(a);
+            inv=inv+" "+a[i];
+            //mensaje(inv);
         }
-        return suma;
-    }
-    public static void llenar(int ar[])
-    {
-        for(int i=0;i<ar.length;i++)
-        {
-            ar[i]=pedirNumero("Favor Ingrese un Numero");
-        }
-    }
-    public static String pedirCadena(String msg)
-    {
-        boolean seguir=true;
-        String cadena="";
-        do
-        {
-            try
-            {
-                cadena=JOptionPane.showInputDialog(msg);  
-                if(cadena.length()>0)seguir=false;                
-            }
-            catch(Exception exp)
-            {
-                JOptionPane.showMessageDialog(null,exp);
-            }
+        return inv;
 
-        }while(seguir);
-        return cadena;
-    }
-    public static int pedirNumero(String msg)
-    {
-        int n=0;
-        boolean seguir=true;
-        do
-        {
-            try
-            {
-                String m=pedirCadena(msg);
-                n=Integer.parseInt(m);
-                seguir=false;   
-            }
-            catch(Exception exp)
-            {
-                mensaje(exp+"");
-            }
-        }while(seguir);
-        return n;
-    }
-    public static void imprimir(int ar[])
-    {
-        String c="Informacion del Arreglo\n";
-        int i=0;
-        while(i<ar.length)
-        {
-            //c=c+ar[i]+" ";//concatenar
-            c=c+ar[i]+" ";
-            i++;
-        }
-        mensaje(c);
-    }
-    public static void mensaje(String c)
-    {
-        JOptionPane.showMessageDialog(null,c);
     }
 }

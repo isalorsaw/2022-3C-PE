@@ -4,16 +4,28 @@ public class TestArreglo
 {
     public static void main(String args[])
     {
-        int a[]={1,2,3,4,5};
+        //int a[]={1,2,3,4,5};
+        int a[]=new int[10];
+        FM.llenarAleatorio(a,10,18);
         FM.imprimir(a);
-        String inv=invertir(a);
-        FM.mensaje(inv);
+        //String inv=invertir(a);
+        //FM.mensaje(inv);
         
         int valor=FM.pedirNumero("Favor ingrese un valor a buscar");
         
         boolean b=buscarValor(a,valor);
         
-        if(b)FM.mensaje("EL Valor "+valor+" si esta en el Arreglo");
+        if(b)
+        {
+            FM.mensaje("EL Valor "+valor+" si esta en el Arreglo");
+            int p=retPosicion(a,valor);
+            //FM.mensaje("El Valor "+valor+" esta en la posicion "+p);
+            String poss=retPosiciones(a,valor);
+            FM.mensaje("El Valor "+valor+" esta en las posiciones "+poss);
+            FM.imprimir(a);
+            int c=contarVeces(a,valor);
+            FM.mensaje("El Valor "+valor+" esta "+c+" Veces ");
+        }
         else FM.mensaje("EL Valor "+valor+" NO esta en el Arreglo");
     }
     public static void main2()
@@ -37,9 +49,29 @@ public class TestArreglo
     {
         for(int i=0;i<a.length;i++)
         {
-            
+            int va=a[i];
+            if(va==v)return true;
         }
       return false;   
+    }
+    public static int retPosicion(int a[], int v)
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            int va=a[i];
+            if(va==v)return i+1;
+        }
+        return 0;
+    }
+    public static int contarVeces(int a[], int v)
+    {
+        int contar=0;
+        for(int i=0;i<a.length;i++)
+        {
+            int va=a[i];
+            if(va==v)contar++;
+        }
+        return contar;
     }
     public static String invertir(int a[])
     {
@@ -51,6 +83,11 @@ public class TestArreglo
             //mensaje(inv);
         }
         return inv;
-
+    }
+    public static String retPosiciones(int a[], int v)
+    {
+        String poss="";
+        //Que vamos a hacer....
+        return poss;
     }
 }

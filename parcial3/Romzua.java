@@ -4,10 +4,13 @@ public class Romzua
 {
     public static void main(String args[])
     {
+        String imagenes[]={"imag1.jpg","imag1.jpg","imag1.jpg","imag1.jpg","imag1.jpg"};
+        int arregloa[]=new int[10];
         boolean seguir=true;
         int puntos=0;
         int pregunta=1;
         
+        llenarAleatorioSR(arregloa,1,25);
         do
         {
             JOptionPane.showMessageDialog(null,"Pregunta "+pregunta+" Llevo "+puntos+" Puntos");
@@ -24,6 +27,8 @@ public class Romzua
                 int resp=preguntar("Ya llegastes a mas de 150 puntos "+puntos+"\nDesea continuar?");
                 if(resp==0)
                 {
+                    llenarValor(arregloa,0);
+                    llenarAleatorioSR(arregloa,1,25);
                     puntos=0;
                     pregunta=1;
                 }

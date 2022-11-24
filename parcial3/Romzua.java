@@ -11,7 +11,11 @@ public class Romzua
         do
         {
             JOptionPane.showMessageDialog(null,"Pregunta "+pregunta+" Llevo "+puntos+" Puntos");
+            
+            //if(resppregunta==respuetacorrecta)
             puntos+=pregunta*30;
+            
+            
             pregunta++;
             
             if(puntos>150)
